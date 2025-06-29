@@ -106,4 +106,32 @@
       }
     }
   }
+  .article-form__preview {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .article-form__preview-image {
+    max-height: 200px;
+    border-radius: 4px;
+    display: block;
+  }
+
+  .article-form__remove-image {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+    padding: 0;
+  }
 }

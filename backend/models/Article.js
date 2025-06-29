@@ -10,12 +10,8 @@ const ArticleSchema = new Schema(
                     type: Date,
                     default: Date.now,
             },
-        categories: [
-            {
-                name: String,
-                slug: String,
-            },
-        ],
+        categories: [{ type: Schema.Types.ObjectId, ref: 'Category' }],
+        views : { type: Number, default: 0 },
 
     },
     { timestamps: true }

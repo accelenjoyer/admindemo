@@ -45,7 +45,8 @@ $font-size: 16px;
     }
 
     input[type="email"],
-    input[type="password"] {
+    input[type="password"],
+    input[type="text"] {
       width: 100%;
       padding: 10px;
       border: 1px solid $border-color;
@@ -63,7 +64,8 @@ $font-size: 16px;
   }
 
   // Стили для кнопки
-  button[type="submit"] {
+  button[type="submit"],
+  button[type = "button"]{
     width: 100%;
     padding: 12px;
     background-color: $primary-color;
@@ -73,6 +75,7 @@ $font-size: 16px;
     font-size: $font-size;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 
     &:hover {
       background-color: darken($primary-color, 10%);

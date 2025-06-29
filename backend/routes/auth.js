@@ -6,9 +6,9 @@ const router = express.Router();
 
 router.post('/register', async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { email, password,name} = req.body;
 
-        if (!email || !password) {
+        if (!email || !password || !name) {
             return res.status(400).json({ message: "Пожалуйста, заполните все поля" });
         }
 
@@ -23,7 +23,7 @@ router.post('/register', async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newAdmin = new Admin({ email, password: hashedPassword });
+        const newAdmin = new Admin({ email, password: hashedPassword,name });
         await newAdmin.save();
 
         res.status(201).json({ message: 'Администратор зарегистрирован' });
