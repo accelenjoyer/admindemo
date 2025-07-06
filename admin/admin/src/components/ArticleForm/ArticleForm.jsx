@@ -123,7 +123,7 @@ const ArticleForm = () => {
 
             <div className="article-form__group">
                 <label htmlFor="title" className="article-form__label">Заголовок:</label>
-                <input type="text" id="title" name="title" value={formData.title} onChange={handleChange} required className="article-form__input" maxLength={200}/>
+                <input type="text" id="title" name="title" value={formData.title} onChange={handleChange} required className="article-form__input" maxLength={160}/>
             </div>
 
             <div className="article-form__group">
